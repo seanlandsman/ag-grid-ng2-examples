@@ -6,7 +6,11 @@ npm-debug.log*
 # Dependency directories
 node_modules
 jspm_packages
+typings
 
 # Optional npm cache directory
 .npm
 
+# ide files
+.idea
+*.iml
