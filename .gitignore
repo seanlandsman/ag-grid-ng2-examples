@@ -15,5 +15,5 @@ typings
 .idea
 *.iml
 
-*.js
-*.js.map
+#*.js
+#*.js.map

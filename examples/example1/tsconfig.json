@@ -8,5 +8,11 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false
-  }
+//  ,
+//    "outDir": "lib"
+  },
+  "files": [
+    "../../typings/es6-shim/es6-shim.d.ts",
+    "examples/boot.ts"
+  ]
 }
