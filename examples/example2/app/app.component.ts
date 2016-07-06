@@ -17,7 +17,6 @@ export class AppComponent {
     private showGrid:boolean;
     private rowData:any[];
     private columnDefs:any[];
-    private rowCount:string;
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -29,7 +28,6 @@ export class AppComponent {
 
     private createRowData() {
         var rowData:any[] = [];
-
         for (var i = 0; i < 15; i++) {
             var countryData = RefData.countries[i % RefData.countries.length];
             rowData.push({
@@ -50,45 +48,13 @@ export class AppComponent {
 
     private createColumnDefs() {
         this.columnDefs = [
-            {headerName: "Name", field: "name", width: 150},
+            {headerName: "Name", field: "name", width: 150, checkboxSelection:true},
             {headerName: "Country", field: "country", width: 150},
             {headerName: "Main Skill", field: "skill", width: 125},
             {headerName: "Proficiency %", field: "proficiency", width: 120},
             {headerName: "Mobile", field: "mobile", width: 150},
             {headerName: "Land-line", field: "landline", width: 155}
         ];
-    }
-
-    private onReady() {
-        console.log('onReady');
-    }
-
-    private onCellClicked($event) {
-        console.log('onCellClicked: ' + $event.rowIndex + ' ' + $event.colDef.field);
-    }
-
-    private onCellValueChanged($event) {
-        console.log('onCellValueChanged: ' + $event.oldValue + ' to ' + $event.newValue);
-    }
-
-    private onCellDoubleClicked($event) {
-        console.log('onCellDoubleClicked: ' + $event.rowIndex + ' ' + $event.colDef.field);
-    }
-
-    private onCellContextMenu($event) {
-        console.log('onCellContextMenu: ' + $event.rowIndex + ' ' + $event.colDef.field);
-    }
-
-    private onCellFocused($event) {
-        console.log('onCellFocused: (' + $event.rowIndex + ',' + $event.colIndex + ')');
-    }
-
-    private onSelectionChanged() {
-        console.log('selectionChanged');
-    }
-
-    private onRowClicked($event) {
-        console.log('onRowClicked: ' + $event.node.data.name);
     }
 }
 

@@ -1,7 +1,6 @@
 # Logs
 logs
 *.log
-npm-debug.log*
 
 # Dependency directories
 node_modules
@@ -15,5 +14,7 @@ typings
 .idea
 *.iml
 
-#*.js
-#*.js.map
+**/*.js
+**/*.js.map
+
+!systemjs.config.js

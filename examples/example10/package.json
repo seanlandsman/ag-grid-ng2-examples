@@ -22,6 +22,7 @@
   "homepage": "http://www.ag-grid.com/",
   "dependencies": {
     "ag-grid": "4.2.x",
+    "ag-grid-enterprise": "4.2.x",
     "ag-grid-ng2": "4.2.x",
     "@angular/common": "2.0.0-rc.4",
     "@angular/compiler": "2.0.0-rc.4",
