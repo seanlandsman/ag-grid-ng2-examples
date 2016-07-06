@@ -18,12 +18,27 @@ export class AppComponent {
     private rowData:any[];
     private columnDefs:any[];
 
+    private quickFilter:string = "";
+
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
         this.gridOptions = <GridOptions>{};
         this.createRowData();
         this.createColumnDefs();
         this.showGrid = true;
+    }
+
+    private onRowSelected($event) {
+        console.log($event);
+    }
+
+    private setQuickFilter() : void {
+        this.gridOptions.api.setQuickFilter(this.quickFilter)
+    }
+
+    private clearQuickFilter() : void {
+        this.quickFilter = "";
+        this.setQuickFilter();
     }
 
     private createRowData() {
